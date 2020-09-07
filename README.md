@@ -44,6 +44,7 @@ By the default, the component will:
 - Display a Blockcerts record in `card` mode (concise information)
 - Will allow verification of a Blockcerts Record
 - Enables auto-verification (verification as the record is loaded)
+- The contract MUST be verified on blockexplorer.bloxberg.org in order to pull the ABI information from the contract for proper verification
 
 ### API
 The component will understand the following options:
