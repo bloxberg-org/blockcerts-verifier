@@ -122,6 +122,17 @@ export function getTransactionLink (state): string {
   return '';
 }
 
+export function getHash (state): string {
+  const certificateDefinition = getCertificateDefinition(state);
+
+  if (certificateDefinition) {
+    console.log(certificateDefinition.certificateJson.SHA256Hash)
+    return certificateDefinition.certificateJson.SHA256Hash;
+  }
+
+  return '';
+}
+
 export function getTransactionId (state): string {
   const certificateDefinition = getCertificateDefinition(state);
 
@@ -226,7 +237,8 @@ export function getIssuerPublicKey (state): string {
   const certificateDefinition = getCertificateDefinition(state);
 
   if (certificateDefinition) {
-    return certificateDefinition.certificateJson.verification.publicKey;
+    //return certificateDefinition.certificateJson.verificationMethod;
+    return certificateDefinition.issuer.publicKey[0].id;
   }
 
   return '';

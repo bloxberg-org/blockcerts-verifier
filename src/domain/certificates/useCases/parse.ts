@@ -1,4 +1,4 @@
-import { Certificate, CertificateOptions } from '@blockcerts/cert-verifier-js';
+import { Certificate, CertificateOptions } from '@bloxberg-org/cert-verifier-js';
 
 export interface ICertificateObject {
   certificateDefinition: Certificate | null;

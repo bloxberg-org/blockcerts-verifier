@@ -42,7 +42,8 @@ export default [{
     'parentStep': 'hashComparison',
     'status': 'success'
   }, {'code': 'checkReceipt', 'label': 'Checking Receipt', 'parentStep': 'hashComparison', 'status': 'success'}]
-}, {
+}
+, {
   'code': 'statusCheck',
   'label': 'Status check',
   'labelPending': 'Checking record status',
@@ -59,4 +60,6 @@ export default [{
     'parentStep': 'statusCheck',
     'status': 'success'
   }, {'code': 'checkExpiresDate', 'label': 'Checking Expiration Date', 'parentStep': 'statusCheck', 'status': 'success'}]
-}];
+}
+
+];

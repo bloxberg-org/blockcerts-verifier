@@ -1,6 +1,7 @@
 import connector from '../../../store/connector';
 import CertificateDetails from './CertificateDetails';
 import {
+  getHash,
   getIssueDate,
   getIssuedOn,
   getIssuerLogo,
@@ -19,7 +20,8 @@ export const mapStateToProps = (state) => ({
   issuerLogo: getIssuerLogo(state),
   transactionLink: getTransactionLink(state),
   transactionId: getTransactionId(state),
-  issuerPublicKey: getIssuerPublicKey(state)
+  issuerPublicKey: getIssuerPublicKey(state),
+  sha256Hash: getHash(state)
 });
 
 const ownProps = {

@@ -1,7 +1,7 @@
 export default {
   errors: {
     errorLabel: 'Error',
-    invalidBlockcerts: 'Not a valid Blockcerts credential. Please check with the issuer or recipient that has provided this credential.',
+    invalidBlockcerts: 'Not a valid bloxberg credential. Please check with the issuer or recipient that has provided this credential.',
     invalidBlockcertsUrl: 'Not a valid credential URL.',
     invalidFormatDragAndDrop: 'Only JSON files are accepted',
     invalidUrl: 'This does not seem to be a valid URL.',
@@ -11,8 +11,8 @@ export default {
     noTransactionId: 'No transaction ID'
   },
   text: {
-    brandName: 'Blockcerts',
-    blockcertsHint: 'Visit Blockcerts website',
+    brandName: 'bloxberg',
+    blockcertsHint: 'Visit bloxberg website',
     by: 'by',
     certified: 'Certified by',
     closeButton: 'Click to close',
@@ -20,6 +20,7 @@ export default {
     dragAndDropHint: '(you can also drag & drop your file).',
     fileUpload: 'Choose JSON file',
     issued: 'Issued on',
+    sha256Hash: 'Sha256 File Hash',
     issueDate: 'Issue Date',
     issuerName: 'Issuer',
     issuerPublicKey: 'Issuer\'s public key',
@@ -27,7 +28,7 @@ export default {
     itemPlural: 'Items',
     metadataButton: 'View Metadata',
     metadataTitle: 'Certificate Metadata',
-    motto: 'Blockcerts, The Open Standard for Blockchain Credentials',
+    motto: 'bloxberg, The Blockchain for Science',
     recipient: 'Recipient',
     share: 'Share on',
     shareButton: 'Share on Social Networks',

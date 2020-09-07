@@ -16,7 +16,7 @@ import validCertificate from '../../assertions/validCertificate';
 import { getShowVerificationModal, getVerificationHasStarted } from '../../../src/selectors/verification';
 import stubCertificateVerify from '../__helpers/stubCertificateVerify';
 import initialize from '../../../src/actions/initialize';
-import { CertificateOptions } from '@blockcerts/cert-verifier-js';
+import { CertificateOptions } from '@bloxberg-org/cert-verifier-js';
 
 jest.mock('../../../src/helpers/stepQueue');
 

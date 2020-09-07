@@ -48,10 +48,11 @@ export default function CertificateDetails ({
   issueDate,
   issuerName,
   issuerPublicKey,
+  sha256Hash,
   transactionLink,
   transactionId,
   direction,
-  hideRecipientName
+  hideRecipientName,
 }) {
   const details = [];
   if (!hideRecipientName) {
@@ -73,7 +74,11 @@ export default function CertificateDetails ({
     {
       title: getText('text.issuerPublicKey'),
       value: issuerPublicKey
-    }
+    },
+      {
+        title: getText('text.sha256Hash'),
+        value: sha256Hash
+      },
   );
 
   const isDisplayColumn = direction === 'column';
