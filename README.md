@@ -11,7 +11,7 @@ The component is developed with Polymer 3.
 To use the component in your project, install it via:
 
 ```
-  npm i @blockcerts/blockcerts-verifier
+  npm i @bloxberg-org/blockcerts-verifier
 ```
 
 If your project **does not require support for IE11**, you can use the following build:
