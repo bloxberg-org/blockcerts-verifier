@@ -1,6 +1,6 @@
 {
   "name": "@bloxberg-org/blockcerts-verifier",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A standalone universal viewer and verifier for bloxberg credentials",
   "repository": {
     "type": "git",
