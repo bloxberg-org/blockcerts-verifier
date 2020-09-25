@@ -100,10 +100,13 @@ export function getDownloadLink (state): string {
 
 export function getMetadataJson (state): any { // TODO: define metadataJson - retrieve from CVJS?
   const certificateDefinition = getCertificateDefinition(state);
-
   if (certificateDefinition) {
     try {
-      return JSON.parse(certificateDefinition.metadataJson);
+      if (typeof(certificateDefinition.metadataJson) == "string") {
+        return JSON.parse(certificateDefinition.metadataJson);
+      }
+      else
+        return certificateDefinition.metadataJson
     } catch (e) {
       return null;
     }
@@ -126,8 +129,7 @@ export function getHash (state): string {
   const certificateDefinition = getCertificateDefinition(state);
 
   if (certificateDefinition) {
-    console.log(certificateDefinition.certificateJson.SHA256Hash)
-    return certificateDefinition.certificateJson.SHA256Hash;
+    return certificateDefinition.certificateJson.crid;
   }
 
   return '';

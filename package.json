@@ -1,6 +1,6 @@
 {
   "name": "@bloxberg-org/blockcerts-verifier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A standalone universal viewer and verifier for bloxberg credentials",
   "repository": {
     "type": "git",
@@ -103,7 +103,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org"
   },
   "semistandard": {
     "globals": [

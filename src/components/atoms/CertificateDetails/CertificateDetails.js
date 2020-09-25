@@ -48,7 +48,7 @@ export default function CertificateDetails ({
   issueDate,
   issuerName,
   issuerPublicKey,
-  sha256Hash,
+  crid,
   transactionLink,
   transactionId,
   direction,
@@ -76,8 +76,8 @@ export default function CertificateDetails ({
       value: issuerPublicKey
     },
       {
-        title: getText('text.sha256Hash'),
-        value: sha256Hash
+        title: getText('text.crid'),
+        value: crid
       },
   );
 

@@ -21,7 +21,7 @@ export const mapStateToProps = (state) => ({
   transactionLink: getTransactionLink(state),
   transactionId: getTransactionId(state),
   issuerPublicKey: getIssuerPublicKey(state),
-  sha256Hash: getHash(state)
+  crid: getHash(state)
 });
 
 const ownProps = {

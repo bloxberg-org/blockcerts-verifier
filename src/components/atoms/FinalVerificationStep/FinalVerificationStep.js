@@ -1,5 +1,6 @@
 import { html } from '@polymer/lit-element';
 import CSS from './_components.final-verification-step-css';
+import getText from '../../../i18n/getText';
 
 function getDetails (finalStep, chain) {
   return finalStep.description
@@ -56,6 +57,12 @@ export default function FinalVerificationStep ({
         <span class='buv-o-link__text--underline  buv-qa-transaction-link'>${finalStep.linkText}</span>
       </a>`
     : '';
+  const bloxbergVerified = !hideLink ? html`</span>
+        <span>${getText('text.successfulBloxberg')}</span>`
+      : '';
+
+
+
 
   return html`
     ${CSS}
@@ -64,7 +71,11 @@ export default function FinalVerificationStep ({
       <dd class$='${detailsClasses}'>
         ${details}
         ${link}
+      </br>
+      </br>
+      ${bloxbergVerified}
       </dd>
+
       <slot></slot>
     </div>
   `;

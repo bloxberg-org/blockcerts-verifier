@@ -20,8 +20,9 @@ export default {
     dragAndDropHint: '(you can also drag & drop your file).',
     fileUpload: 'Choose JSON file',
     issued: 'Issued on',
-    sha256Hash: 'Sha256 File Hash',
+    crid: 'File Cryptographic Identifier',
     issueDate: 'Issue Date',
+    bloxbergCertified: 'Certified by the bloxberg Consortium',
     issuerName: 'Issuer',
     issuerPublicKey: 'Issuer\'s public key',
     item: 'Item',
@@ -42,7 +43,8 @@ export default {
     verify: 'Verify',
     verifyAgain: 'Verify again',
     verifyOther: 'Verify another record',
-    viewRecord: 'View Record'
+    viewRecord: 'View Record',
+    successfulBloxberg: 'This certificate has been verified  on the bloxberg blockchain.'
   },
   date: {
     months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],

@@ -54,6 +54,7 @@ export default function CardCertificate (props) {
           <h1 class$=${titleClass}>${certificateTitle}</h1>
           <h2 class$='${titleClass}  buv-c-card__recipient'>${recipientName}</h2>
           <span class='buv-o-text-12'>${getText('text.issued')} <time datetime$='${issuedOn}'>${issueDate}</time> ${getText('text.by')} ${issuerName}</span>
+          <span class='buv-o-text-12'>${getText('text.bloxbergCertified')} 
         </div>
       ${
   hideRecordLink
