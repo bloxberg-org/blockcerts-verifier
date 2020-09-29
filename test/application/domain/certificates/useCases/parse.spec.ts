@@ -3,8 +3,8 @@ import domain from '../../../../../src/domain';
 import certificateFixture from '../../../../fixtures/valid-certificate-example.json';
 import notACertificateDefinition from '../../../../fixtures/not-a-certificate-definition.json';
 import validCertificate from '../../../../assertions/validCertificate';
-import * as verifier from '@blockcerts/cert-verifier-js';
-import { CertificateOptions } from '@blockcerts/cert-verifier-js';
+import * as verifier from '@bloxberg-org/cert-verifier-js';
+import { CertificateOptions } from '@bloxberg-org/cert-verifier-js';
 
 describe('domain certificates parse method test suite', function () {
   describe('given a valid definition of a certificate', function () {

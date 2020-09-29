@@ -14,6 +14,6 @@ module.exports = {
     './test/e2e'
   ],
   transformIgnorePatterns: [
-    'node_modules/(?!(@polymer|lit-html|pwa-helpers|@blockcerts/cert-verifier-js)/)'
+    'node_modules/(?!(@polymer|lit-html|pwa-helpers|@bloxberg-org/cert-verifier-js)/)'
   ]
 };

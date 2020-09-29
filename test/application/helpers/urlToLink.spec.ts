@@ -13,7 +13,7 @@ describe('urlToLink test suite', function () {
 
   describe('given it receives a string with an email address', function () {
     it('should not transform the email to a link', function () {
-      const fixtureString = '<p>This is the email: botcerts@blockcerts.org</p>';
+      const fixtureString = '<p>This is the email: botcerts@bloxberg-org.org</p>';
       expect(urlToLink(fixtureString)).toBe(fixtureString);
     });
   });
@@ -27,7 +27,7 @@ describe('urlToLink test suite', function () {
 
   describe('given it receives a string with a handle', function () {
     it('should not transform the handle to a link', function () {
-      const fixtureString = '<p>This is the phone number: @blockcerts</p>';
+      const fixtureString = '<p>This is the phone number: @bloxberg-org</p>';
       expect(urlToLink(fixtureString)).toBe(fixtureString);
     });
   });
