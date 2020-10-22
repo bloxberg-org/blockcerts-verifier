@@ -8,23 +8,21 @@ pdfjs.GlobalWorkerOptions.workerSrc =
     "../helpers/pdf.worker.js";
 
 export default function uploadCertificateDefinition (file) {
+
   return async function (dispatch) {
     dispatch({
       type: ACTIONS.UPLOAD_CERTIFICATE_DEFINITION
     });
-
+    // Handler for pdf certificates
     if (file.type === "application/pdf"){
       console.log(file)
       console.log(typeof(file))
 
-      var test = URL.createObjectURL( file )
-      var loadingTask = pdfjs.getDocument(test);
+      let fileURL = URL.createObjectURL( file )
+      let loadingTask = pdfjs.getDocument(fileURL);
       loadingTask.promise.then(async function(pdf) {
-        const test2 = await pdf.getAttachments()
-        const blob = new Blob([JSON.stringify(test2, null, 2)], {type : 'application/json'});
-        const blobContent = new Blob([JSON.stringify(test2.bloxbergJSONCertificate.content, null, 2)], {type : 'application/json'})
-        let jsonCert = ArrayToJSON(test2.bloxbergJSONCertificate.content)
-
+        const pdfAttachment = await pdf.getAttachments()
+        let jsonCert = ArrayToJSON(pdfAttachment.bloxbergJSONCertificate.content)
         return dispatch(updateCertificateDefinition(jsonCert));
       }) // Promise
       function ArrayToJSON (binArray)
