@@ -2,10 +2,10 @@ import * as ACTIONS from '../constants/actionTypes';
 import domain from '../domain';
 import updateCertificateDefinition from './updateCertificateDefinition';
 //import pdfjs from "../../node_modules/@bundled-es-modules/pdfjs-dist/build/pdf";
-import pdfjs from "../helpers/pdf.js"
+import pdfjs from '../helpers/pdf'
 
 pdfjs.GlobalWorkerOptions.workerSrc =
-    "../helpers/pdf.worker.js";
+    'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.2.228/build/pdf.worker.js';
 
 export default function uploadCertificateDefinition (file) {
 
@@ -36,8 +36,6 @@ export default function uploadCertificateDefinition (file) {
     } // If PDF
     else {
       const definition = await domain.certificates.read(file);
-      console.log(definition)
-      console.log(typeof(definition))
       dispatch(updateCertificateDefinition(JSON.parse(definition)));
     }
   };
