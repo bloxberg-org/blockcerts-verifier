@@ -14,7 +14,7 @@ export default function FileUpload ({ onChange = () => {}, hideFileUpload = fals
       <span class='buv-o-link__text--underline'>${getText('text.fileUpload')}</span>
       <input
         type='file'
-        accept='application/json'
+        accept='application/json, application/pdf'
         id='buv-json-file-upload'
         class='buv-u-visually-hidden'
         onchange='${(e) => { onChange(e.target.files[0]); }}'

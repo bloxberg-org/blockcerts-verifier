@@ -3,7 +3,7 @@ export default {
     errorLabel: 'Żball',
     invalidBlockcerts: 'Mhux kredenzjal validu ta \'Blockcerts\'. Jekk jogħġbok iċċekkja ma \'l-emittent jew ir-riċevitur li pprovda din il-kredenzjali.',
     invalidBlockcertsUrl: 'Il-URL taċ-ċertifikat mhuwiex validu',
-    invalidFormatDragAndDrop: 'Only JSON files are accepted',
+    invalidFormatDragAndDrop: 'Only JSON or PDF files are accepted',
     invalidUrl: 'This does not seem to be a valid URL.',
     noDownloadLink: 'No link provided for download!',
     noMetadata: 'No metadata specified for this record',

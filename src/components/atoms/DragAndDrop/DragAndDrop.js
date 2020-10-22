@@ -2,9 +2,9 @@ import { html, LitElement } from '@polymer/lit-element';
 import CSS from './_components.drag-and-drop-css';
 import getText from '../../../i18n/getText';
 
-function isJson (file) {
+function isJsonorPDF (file) {
   const { name } = file;
-  return name.substr(name.length - 4, 4) === 'json';
+  return name.substr(name.length - 4, 4) === 'json' || name.substr(name.length - 3, 3) === 'pdf';
 }
 
 class DragAndDrop extends LitElement {
@@ -43,7 +43,7 @@ class DragAndDrop extends LitElement {
     this.isDraggedOver = false;
 
     const file = e.dataTransfer.files[0];
-    this.denyDrop = !isJson(file);
+    this.denyDrop = !isJsonorPDF(file);
 
     if (this.denyDrop) {
       return;
